@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script language="JavaScript" src="./Javascript.js"></script>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        function multi(valor) {
+            if (valor == 'multi') {
+                document.getElementById('gplats').style.display = 'block';
+            } else if (valor == 'ps1') {
+                documento.getElementById('gplats').style.display = 'none';
+            } else if (valor == 'ps2') {
+                documento.getElementById('gplats').style.display = 'none';
+            }
+        }
+    </script>
+    <h1>Cadastro de Avenidas</h1><br>
+    <form action="teste.php" method="post">
+        Nome <input type="text" name="fname"><br> Extensão <input type="text" name="lname"><br>
+        <label> Possui ciclo faixa?</label>
+        <select name="gplats" onchange="multi(this.value);">
+            <option value="ps1"></option>
+            <option value="multi">Sim</option>
+            <option value="ps2">Não</option>
+        </select>
+        <input type="text" id="gplats" style="display:none;"><br>
+        <input type="submit">
+    </form>
+
+</body>
+
+</html>
